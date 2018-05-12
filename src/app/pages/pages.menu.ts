@@ -3,6 +3,18 @@ export const PAGES_MENU = [
     path: 'pages',
     children: [
       {
+        path: 'ensaio',
+        data: {
+          menu: {
+            title: 'Ensaio',
+            icon: 'ion-android-home',
+            selected: false,
+            expanded: false,
+            order: 0
+          }
+        }
+      },
+      {
         path: 'dashboard',
         data: {
           menu: {
@@ -10,7 +22,7 @@ export const PAGES_MENU = [
             icon: 'ion-android-home',
             selected: false,
             expanded: false,
-            order: 0
+            order: 100
           }
         }
       },
