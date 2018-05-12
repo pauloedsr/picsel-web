@@ -1,7 +1,17 @@
 <div class="row">
   <div class="col-12">
-      <ba-card cardTitle="{{ensaio?.ensaio?.nome}}" baCardClass="with-scroll">
-        <div *ngFor="let foto of ensaio.fotos" class="foto img-thumbnail" [ngStyle]="{'background-image': 'url(\''+foto.foto+'\')'}" >{{foto.nome}}</div>
+      <ba-card cardTitle="{{ensaio?.ensaio?.nome}} ({{ensaio?.fotos.length}} fotos)" baCardClass="with-scroll">
+          <div class="row">
+            <div class="col-xs-4 col-sm-12 col-md-3 coluna" *ngFor="let foto of ensaio.fotos" >
+              <!-- <div class="foto img-thumbnail" [ngStyle]="{'background-image': 'url(\''+foto.foto+'\')'}" >{{foto.nome}}</div> -->
+              <div class="foto img-thumbnail" >
+                <img src="{{foto.foto}}"/>
+                <div class="block" (click)="zoom(foto)">
+                  {{foto.nome}}
+                </div>
+              </div>
+            </div>
+          </div>  
       </ba-card>
   </div>
 </div>

@@ -1,3 +1,4 @@
+import { Foto } from './../../class/ensaio-view';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { EnsaioService } from '../../services/ensaio.service';
@@ -22,6 +23,10 @@ export class EnsaioComponent implements OnInit {
       this.ensaio = data;
       console.log('ensaio', this.ensaio);
     })
+  }
+
+  zoom(foto: Foto) {
+    alert(foto.nome);
   }
 
 

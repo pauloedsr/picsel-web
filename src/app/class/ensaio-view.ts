@@ -3,7 +3,7 @@ export class EnsaioView {
     fotos: Foto[];
 }
   
-class Foto {
+export class Foto {
     _id: string;
     updatedAt: string;
     createdAt: string;
@@ -14,7 +14,7 @@ class Foto {
     __v: number;
 }
 
-class Ensaio {
+export class Ensaio {
     _id: string;
     updatedAt: string;
     createdAt: string;
