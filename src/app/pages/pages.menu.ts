@@ -1,16 +1,17 @@
 export const PAGES_MENU = [
   {
-    path: 'pages',
+    path: '',
     children: [
       {
         path: 'ensaio',
         data: {
           menu: {
-            title: 'Ensaio',
+            title: 'Seleção de Fotos',
             icon: 'ion-android-home',
             selected: false,
             expanded: false,
-            order: 0
+            pathMatch: 'prefix',
+            order: 0,
           }
         }
       },

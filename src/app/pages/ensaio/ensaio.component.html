@@ -1,3 +1,8 @@
-<p>
-  ensaio works! {{ensaioId}}
-</p>
+<div class="row">
+  <div class="col-12">
+      <ba-card cardTitle="{{ensaio?.ensaio?.nome}}" baCardClass="with-scroll">
+        <div *ngFor="let foto of ensaio.fotos" class="foto img-thumbnail" [ngStyle]="{'background-image': 'url(\''+foto.foto+'\')'}" >{{foto.nome}}</div>
+      </ba-card>
+  </div>
+</div>
+

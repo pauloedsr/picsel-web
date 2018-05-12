@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { EnsaioComponent } from './ensaio.component';
 import { routing } from './ensaio.routing';
+import { NgaModule } from '../../theme/nga.module';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    routing
+    NgaModule,
+    routing,
   ],
   declarations: [
     EnsaioComponent

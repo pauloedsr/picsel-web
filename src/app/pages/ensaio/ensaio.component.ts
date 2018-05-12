@@ -11,10 +11,10 @@ import { EnsaioView } from '../../class/ensaio-view';
 export class EnsaioComponent implements OnInit {
 
   ensaioId: string;
-  ensaio: EnsaioView;
+  ensaio: EnsaioView = new EnsaioView();
 
   constructor(private route: ActivatedRoute, private ensaioService: EnsaioService) {
-    route.params.subscribe(params => this.ensaioId = params['id']);
+    route.params.subscribe(params => this.ensaioId = params['chave']);
   }
 
   ngOnInit() {
@@ -23,5 +23,6 @@ export class EnsaioComponent implements OnInit {
       console.log('ensaio', this.ensaio);
     })
   }
+
 
 }

@@ -4,7 +4,7 @@ import { EnsaioComponent } from './ensaio.component';
 
 const routes: Routes = [
   {
-    path: ':id',
+    path: ':chave',
     component: EnsaioComponent
   }
 ];

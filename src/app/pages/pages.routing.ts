@@ -15,10 +15,10 @@ export const routes: Routes = [
     loadChildren: 'app/pages/register/register.module#RegisterModule'
   },
   {
-    path: 'pages',
+    path: '',
     component: Pages,
     children: [
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: '', redirectTo: 'ensaio', pathMatch: 'full' },
       { path: 'ensaio', loadChildren: './ensaio/ensaio.module#EnsaioModule' },
       { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
       { path: 'editors', loadChildren: './editors/editors.module#EditorsModule' },
