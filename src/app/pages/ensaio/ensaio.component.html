@@ -1,18 +1,23 @@
 <div class="row">
   <div class="col-12">
-      <ba-card cardTitle="{{ensaio?.ensaio?.nome}} ({{ensaio?.fotos.length}} fotos)" baCardClass="with-scroll">
+      <ba-card cardTitle="{{ensaio?.ensaio?.nome}} " baCardClass="with-scroll">
+          <div class="row" style="margin-bottom: 20px;">
+            <div class="col-4">{{ensaio?.totalFotos}} fotos. <strong>{{ensaio?.totalSel}}</strong> selecionadas.</div>
+            <div class="col-8"></div>
+          </div>
           <div class="row">
             <div class="col-xs-4 col-sm-12 col-md-3 coluna" *ngFor="let foto of ensaio.fotos" >
               <!-- <div class="foto img-thumbnail" [ngStyle]="{'background-image': 'url(\''+foto.foto+'\')'}" >{{foto.nome}}</div> -->
-              <div class="foto img-thumbnail" >
+              <div class="foto img-thumbnail" [ngStyle]="styleSelecionado(foto)" >
                 <img src="{{foto.foto}}"/>
                 <div class="block" (click)="zoom(foto)">
-                  {{foto.nome}}
+                  <i class="fa fa-check" *ngIf="foto.selecionado" [ngStyle]="styleColorSelecionados()"></i> {{foto.nome}}
                 </div>
               </div>
             </div>
           </div>  
       </ba-card>
+      <button class="btn btn-primary confirm-btn" (click)="maisFotos()">Mais Fotos</button>
   </div>
 </div>
 

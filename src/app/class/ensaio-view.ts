@@ -1,6 +1,8 @@
 export class EnsaioView {
     ensaio: Ensaio;
     fotos: Foto[];
+    totalSel: Number;
+    totalFotos: Number;
 }
   
 export class Foto {
